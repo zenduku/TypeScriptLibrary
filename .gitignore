@@ -2,7 +2,11 @@ node_modules/
 dist/
 *.log
 .env
-database.sqlite
+# Allow .env.example to be committed (like Laravel)
+!.env.example
+# Note: database.sqlite is NOT ignored (like Laravel)
+# The file will be created automatically when the app runs
+# Users can commit an empty database.sqlite file if needed
 .DS_Store
 coverage/
 *.swp
